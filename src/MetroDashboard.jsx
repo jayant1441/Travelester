@@ -37,7 +37,7 @@ class MetroDashboard extends Component {
           response.interchange.length
         } interchange from ${response.interchange.toString()}. There are a total of ${
           response.path.length
-        } stations in between as listed.`
+        } stations in between as follows.`
       );
       this.setState({ result: response, isLoaded: true, loader: false });
     });
@@ -88,20 +88,20 @@ class MetroDashboard extends Component {
                   cy="35px"
                   r="20px"
                   fill="rgba(0,0,0,0)"
-                  strokeWidth="5px"
+                  strokeWidth="4px"
                   className="loader-circle"
                 />
               </svg>
             </div>
           </div>
         ) : null}
-        {this.state.helpVisibility ? (
+        {this.state.helpVisibility && (
           <Helper
             closeHelper={() => this.setState({ helpVisibility: false })}
           />
-        ) : null}
+        ) }
         <div className="container m-1">
-          <h1>Delhi Metro Direction</h1>
+          <h1>Delhi Metro Direction Guide</h1>
           <div className="card m-1" id="card">
             <h4>
               Either type the metro station name or use the Voice button to
@@ -115,7 +115,7 @@ class MetroDashboard extends Component {
                   value={this.state.initial}
                   type="text"
                   className="text-field"
-                  placeholder="Starting Metro Station"
+                  placeholder="Starting Metro Station is :"
                 />
               </div>
               <div className="m-1">
@@ -125,7 +125,7 @@ class MetroDashboard extends Component {
                   name="final"
                   type="text"
                   className="text-field"
-                  placeholder="Ending Metro Station"
+                  placeholder="Ending Metro Station is :"
                 />
               </div>
               <div>
