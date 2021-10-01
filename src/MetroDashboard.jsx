@@ -78,7 +78,7 @@ class MetroDashboard extends Component {
                 <circle
                   cx="35px"
                   cy="35px"
-                  r="25px"
+                  r="20px"
                   fill="rgba(0,0,0,0)"
                   strokeWidth="5px"
                   stroke="#eee"
@@ -86,7 +86,7 @@ class MetroDashboard extends Component {
                 <circle
                   cx="35px"
                   cy="35px"
-                  r="25px"
+                  r="20px"
                   fill="rgba(0,0,0,0)"
                   strokeWidth="5px"
                   className="loader-circle"
@@ -140,8 +140,8 @@ class MetroDashboard extends Component {
               <div className="m-1">
                 <h2>Interchanges: </h2>
                 <div>
-                  {this.state.result.interchange.map((data, index) => (
-                    <p key={`interchange-${index}`}>{data}</p>
+                  {this.state.result.interchange.map((data, i) => (
+                    <p key={`interchange-${i}`}>{data}</p>
                   ))}
                 </div>
               </div>
@@ -151,8 +151,8 @@ class MetroDashboard extends Component {
                 <div>{this.state.result.line2[0]}</div>
                 <div>
                   End Lines:{" "}
-                  {this.state.result.lineEnds.map((data, index) => (
-                    <span key={`station-${index}`}>{data}, </span>
+                  {this.state.result.lineEnds.map((data, i) => (
+                    <span key={`station-${i}`}>{data}, </span>
                   ))}
                 </div>
               </div>
@@ -162,8 +162,8 @@ class MetroDashboard extends Component {
               <div className="m-1">
                 <h4>Stations in between:</h4>
                 <div>
-                  {this.state.result.path.map((data, index) => (
-                    <div key={`in-station-${index}`}>{data}</div>
+                  {this.state.result.path.map((data, i) => (
+                    <div key={`in-station-${i}`}>{data}</div>
                   ))}
                 </div>
               </div>
