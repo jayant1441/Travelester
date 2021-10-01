@@ -61,15 +61,7 @@ class Helper extends Component {
                 Then, just say - "<b>Search</b>". (and it will give the results)
               </p>
               <br />
-
-              <h4>Link to my React Repo:</h4>
-              <a href="https://github.com/jayant1441/Travelester">
-                https://github.com/jayant1441/Travelester
-              </a>
-              <h4>Link to my Django API Repo:</h4>
-              <a href="https://github.com/raghavdhingra/Delhi-Metro-Map-API">
-                https://github.com/raghavdhingra/Delhi-Metro-Map-API
-              </a>
+             
             </div>
           </div>
         </div>
